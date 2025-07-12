@@ -17,6 +17,7 @@ export class UserComponent {
   }
 
   onSelectedUser() {
-    console.log('Clicked!');
+    const randomNumber = Math.floor(Math.random() * DUMMY_USERS.length);
+    this.selectedUser = DUMMY_USERS[randomNumber];
   }
 }
