@@ -7,6 +7,7 @@
         [id]="users[0].id"
         [name]="users[0].name"
         [avatar]="users[0].avatar"
+        (select)="onReceiveUser($event)"
       />
     </li>
   </ul>
