@@ -3,7 +3,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 
 import { DUMMY_USERS } from './dummy-users';
-import { TasksComponent } from "./components/tasks/tasks.component";
+import { TasksComponent } from './components/tasks/tasks.component';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +14,11 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 export class AppComponent {
   title = 'EasyTrack';
   users = DUMMY_USERS;
-  userName = '';
+  userId = 'u1';
+  selectedUser = this.users.find((user) => user.id === this.userId)!;
 
-  onReceiveUser(name: string) {
-    console.log('selected name' + name);
-    this.userName = name;
+  onReceiveUser(id: string) {
+    console.log('selected id' + id);
+    this.userId = id;
   }
 }
