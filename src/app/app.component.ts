@@ -13,7 +13,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 })
 export class AppComponent {
   title = 'EasyTrack';
-  users = DUMMY_USERS;
+  users = DUMMY_USE
+  RS;
   userId = 'u1';
   selectedUser = this.users.find((user) => user.id === this.userId)!;
 
