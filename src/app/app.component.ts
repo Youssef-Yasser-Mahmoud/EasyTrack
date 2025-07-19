@@ -14,11 +14,13 @@ import { TasksComponent } from './components/tasks/tasks.component';
 export class AppComponent {
   title = 'EasyTrack';
   users = DUMMY_USERS;
-  userId = 'u1';
-  selectedUser = this.users.find((user) => user.id === this.userId)!;
+  userId!: string;
+
+  get selectedUser() {
+    return this.users.find((user) => user.id === this.userId)!;
+  }
 
   onReceiveUser(id: string) {
-    console.log('selected id' + id);
     this.userId = id;
   }
 }
