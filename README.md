@@ -1,59 +1,29 @@
 # EasyTrack
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+`EasyTrack` is a **task management application** built with Angular. It enables users to select a user profile and manage tasks assigned to them, including viewing, adding, and marking tasks as complete. The application uses localStorage for persistent task data and features a clean, component-based UI.
 
-## Development server
+## Project Overview
 
-To start a local development server, run:
+- **User Selection:** Users are listed and can be selected to view their associated tasks.
+- **Task Management:** For each user, you can add new tasks and mark tasks as complete.
+- **Persistent Storage:** Tasks are stored in localStorage, ensuring data is retained across browser reloads.
+- **UI Components:** The interface is built with custom Angular components for users, tasks, headers, and cards.
 
-```bash
-ng serve
-```
+## Angular Features Used
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Standalone Components:** All components (e.g., `AppComponent`, `UserComponent`, `TasksComponent`) are standalone, utilizing the `imports` property in their decorators.
+- **NgIf & NgFor Directives:** Templates use Angular's structural directives for conditional rendering and looping, such as `@if` and `@for` in `app.component.html` and `tasks.component.html`.
+- **Input & Output Properties:** Components communicate using `@Input` and `@Output` decorators. For example, `UserComponent` receives user data and emits selection events.
+- **Event Binding:** User actions (like clicks) are handled with event bindings, e.g., `(click)="onSelectedUser()"`.
+- **Services & Dependency Injection:** `TasksService` manages task data and is injected into components for shared state and logic.
+- **Forms:** The `NewTaskComponent` uses Angular's `FormsModule` and `ngModel` for two-way data binding in forms.
+- **Pipes:** The `TaskComponent` uses the `DatePipe` to format task due dates.
+- **Routing Setup:** The project is configured for routing (see `app.config.ts`), though no routes are currently defined.
+- **Application Configuration:** Uses `ApplicationConfig` for bootstrapping and zone change detection.
 
-## Code scaffolding
+## Main Logic Components
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `AppComponent`
+- `UserComponent`
+- `TasksComponent`
+- `TasksService`
