@@ -2,6 +2,10 @@
 
 `EasyTrack` is a **task management application** built with Angular. It enables users to select a user profile and manage tasks assigned to them, including viewing, adding, and marking tasks as complete. The application uses localStorage for persistent task data and features a clean, component-based UI.
 
+## demo
+
+https://easy-track-xi.vercel.app/
+
 ## Project Overview
 
 - **User Selection:** Users are listed and can be selected to view their associated tasks.
